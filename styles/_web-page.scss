@@ -1,0 +1,26 @@
+.web-page{
+    @include base-text;
+    margin: 0;
+    padding: 0;
+    &__item{
+        background-color: #FFF;
+        box-shadow: 0 5px 15px -5px rgba(0,0,0,0.5);
+    }
+    &_red{
+        background-color: $bg-red;
+    }
+    &_blue{
+        background-color: $bg-blue;
+    }
+    &_darkblue{
+        background-color: $bg-darkblue;
+    }
+}
+
+.hidden{
+    display: none !important;
+}
+
+section h2{
+    font-size:  1rem;
+}

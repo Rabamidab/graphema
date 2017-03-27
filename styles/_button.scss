@@ -1,0 +1,24 @@
+.button{
+    display: inline-block;
+    line-height: 0.5;
+    padding: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    &_green{
+        @include button-style(green);
+    }
+    &_blue{
+        @include button-style(blue);
+    }
+    &_orange{
+        @include button-style(orange);
+    }
+    &__large{
+        font-size: 0.875rem;
+    }
+    &__small{
+        font-size: 0.6rem;
+    }
+}

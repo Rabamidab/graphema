@@ -1,0 +1,22 @@
+.social{
+    &__link{
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        font-size: 0;
+        background-image: url("../pictures/social.svg");
+        background-repeat: no-repeat;
+        &_twitter{
+            background-position: 0 0;
+        }
+        &_facebook{
+            background-position: -32px 0;
+        }
+        &_vimeo{
+            background-position: -65px 0;
+        }
+        &_pinterest{
+            background-position: -95px 0;
+        }
+    }
+}

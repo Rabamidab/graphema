@@ -1,0 +1,50 @@
+.header{
+    box-sizing: border-box;
+    position: relative;
+    height: 500px;
+    padding: $base-padding;
+    background-color: #FFF;
+    background-image: url("../pictures/woman-photo.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right top;
+    &__logo{
+        &_1{
+            float: left;
+        }
+        &_2{
+            float: right;
+        }
+    }
+    &__recitation{
+        position: absolute;
+        bottom: $base-padding;
+        right: $base-padding;
+        line-height: 0.7;
+        font-size: 72px;
+        font-family: "AlternateGothicNo2BT";
+        font-weight: bold;
+        color: #fff;
+        user-select: none;
+    }
+    &__button{
+        position: absolute;
+        bottom: $base-padding;
+        left: $base-padding;
+    }
+    &__about{
+        padding-top: $base-padding;
+    }
+}
+
+.about{
+    clear: both;
+    &__header{
+        margin-top: none;
+        font-size: 1.3125rem
+    }
+    &__description{
+        width: 50%;
+        font-size: $base-font-size;
+    }
+}
