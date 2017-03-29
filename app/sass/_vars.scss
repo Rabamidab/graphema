@@ -1,0 +1,84 @@
+$bg-red: #e76a46;
+$bg-blue: #8bb1bd;
+$bg-darkblue: #434c55;
+$text-color: #434c55;
+$grey: #b4b4b4;
+$button-blue: #65a0b8;
+$base-font-size: 0.875rem;
+$base-page-with: 1300px;
+$base-wrapper-with: 1160px;
+$base-padding: 40px;
+$navbar-height: 80px;
+$footer-height: 50px;
+
+@font-face {
+    font-family: HelveticaNeue;
+    src: url('../fonts/HelveticaNeueCyr-Roman.otf');
+    font-weight: normal;
+}
+
+@font-face{ 
+    font-family: HelveticaNeue;
+    src: url('../fonts/HelveticaNeueCyr-Bold.otf');
+    font-weight: bold;
+}
+
+@font-face{ 
+    font-family: AlternateGothicNo2BT;
+    src: url('../fonts/ufonts.com_alternategothicno2bt-regular-opentype.otf');
+    font-weight: bold;
+}
+
+@mixin base-text{
+    font-size: $base-font-size;
+    font-family: "HelveticaNeue";
+    color: $text-color;
+    line-height: 2;
+}
+
+@mixin button-style($color){
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    
+    @if $color == blue {
+        border-color: rgb(101, 160, 184);
+        background-image: -moz-linear-gradient( 90deg, rgb(101,160,184) 0%, rgb(128,188,212) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(101,160,184) 0%, rgb(128,188,212) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(101,160,184) 0%, rgb(128,188,212) 100%);
+        &:active{
+            background-image: -moz-linear-gradient( 90deg, rgb(128,188,212) 0%, rgb(101,160,184) 100%);
+            background-image: -webkit-linear-gradient( 90deg, rgb(128,188,212) 0%, rgb(101,160,184) 100%);
+            background-image: -ms-linear-gradient( 90deg, rgb(128,188,212) 0%, rgb(101,160,184) 100%);
+        }
+    } @else if $color == green {
+        border-color: rgb(76, 161, 91);
+        background-image: -moz-linear-gradient( 90deg, rgb(76,161,91) 0%, rgb(106,177,119) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(76,161,91) 0%, rgb(106,177,119) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(76,161,91) 0%, rgb(106,177,119) 100%);
+        &:active{
+            background-image: -moz-linear-gradient( 90deg, rgb(106,177,119) 0%, rgb(76,161,91) 100%);
+            background-image: -webkit-linear-gradient( 90deg, rgb(106,177,119) 0%, rgb(76,161,91) 100%);
+            background-image: -ms-linear-gradient( 90deg, rgb(106,177,119) 0%, rgb(76,161,91) 100%);
+        }
+    } @else if $color == orange {
+        border-color: rgb(239, 138, 0);
+        background-image: -moz-linear-gradient( 90deg, rgb(232,142,19) 0%, rgb(247,164,18) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(232,142,19) 0%, rgb(247,164,18) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(232,142,19) 0%, rgb(247,164,18) 100%);
+        &:active{
+            background-image: -moz-linear-gradient( 90deg, rgb(247,164,18) 0%, rgb(232,142,19) 100%);
+            background-image: -webkit-linear-gradient( 90deg, rgb(247,164,18) 0%, rgb(232,142,19) 100%);
+            background-image: -ms-linear-gradient( 90deg, rgb(247,164,18) 0%, rgb(232,142,19) 100%);
+        }
+    }
+
+}
+
+@mixin clearfix{
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
